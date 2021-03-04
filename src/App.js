@@ -11,7 +11,7 @@ const produtos = [
     id: 2,
     nome: "Notebook",
     preco: "R$ 3000",
-    cores: ["#ffd045", "#4394b", "#f37c59"],
+    cores: ["#ffd045", "#d4394b", "#f37c59"],
   },
   {
     id: 3,
@@ -21,51 +21,27 @@ const produtos = [
   },
 ];
 
-for (let produto of produtos) {
-  produto.preco = +produto.preco.replace("R$ ", "");
-}
-const teste2 = produtos.filter((item) => item.preco > 1500);
-console.log(teste2);
-
 function App() {
+  const dados = produtos.filter(
+    ({ preco }) => Number(preco.replace("R$ ", "")) > 1500
+  );
+  console.log(dados);
   return (
-    <div>
-      <h1>Smartphone</h1>
-      <p>Preço: R$ {}</p>
-      <div
-        style={{
-          backgroundColor: "#29d8d5",
-          width: "900px",
-          height: "30px",
-          color: "#fff",
-          marginBottom: "10px",
-        }}
-      >
-        #29d8d5
-      </div>
-      <div
-        style={{
-          backgroundColor: "#252a34",
-          width: "900px",
-          height: "30px",
-          color: "#fff",
-          marginBottom: "10px",
-        }}
-      >
-        #252a34
-      </div>
-      <div
-        style={{
-          backgroundColor: "#fc3766",
-          width: "900px",
-          height: "30px",
-          color: "#fff",
-          marginBottom: "10px",
-        }}
-      >
-        #fc3766
-      </div>
-    </div>
+    <section>
+      {dados.map(({ id, nome, preco, cores }) => (
+        <div key={id}>
+          {nome}
+          <p>Preço:{preco}</p>
+          <ul>
+            {cores.map((cor) => (
+              <li style={{ backgroundColor: cor, color: "#f1f1f1" }} key={cor}>
+                {cor}
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </section>
   );
 }
 

@@ -20,16 +20,18 @@ const produtos = [
     cores: ["#365069", "#47c1c8", "#f95786"],
   },
 ];
-const teste = produtos.map((item) => item.preco.replace("R$ ", ",").split(","));
-console.log(teste);
+
+for (let produto of produtos) {
+  produto.preco = +produto.preco.replace("R$ ", "");
+}
+const teste2 = produtos.filter((item) => item.preco > 1500);
+console.log(teste2);
 
 function App() {
   return (
     <div>
-      {produtos.map((item) => item.preco.replace("R$ ", ",").split(","))}
-
-      <h1>Smartphone </h1>
-      <p>Preço R$ 2000</p>
+      <h1>Smartphone</h1>
+      <p>Preço: R$ {}</p>
       <div
         style={{
           backgroundColor: "#29d8d5",

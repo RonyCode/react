@@ -1,4 +1,5 @@
 import React from "react";
+import Header from "./Header";
 
 const produtos = [
   {
@@ -28,6 +29,7 @@ function App() {
   console.log(dados);
   return (
     <section>
+      <Header />
       {dados.map(({ id, nome, preco, cores }) => (
         <div key={id}>
           {nome}

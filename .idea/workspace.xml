@@ -25,7 +25,11 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\ronya\AppData\Roaming\npm\node_modules\prettier" />
+<<<<<<< HEAD
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
+=======
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+>>>>>>> cbf744eb15c3d59284abbae22f32e0a42f2e6041
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -41,8 +45,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1614946434034</updated>
+<<<<<<< HEAD
       <workItem from="1614946437006" duration="1454000" />
       <workItem from="1614947945576" duration="815000" />
+=======
+      <workItem from="1614946437006" duration="1025000" />
+>>>>>>> cbf744eb15c3d59284abbae22f32e0a42f2e6041
     </task>
     <servers />
   </component>
